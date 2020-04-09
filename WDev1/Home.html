@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Home Page</title>
+	<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+	<div class = "container">
+		<div class = "nav-wrapper">
+			<div class = "left-side">
+				<div class = "nav-link-wrapper active-nav-link">
+					<a href="Home.html">home</a>
+				</div>
+				<div class = "nav-link-wrapper">
+					<a href="About.html">about</a>
+				</div>
+			</div>
+			<div class = "right-side">
+				<div class = "brand">
+					SAURAV SUDHIR
+				</div>
+			</div>
+		</div>
+		
+		<div class = "content-wrapper">
+			<div class = "portfolio-items-wrapper">
+				
+				<div class = "portfolio-item-wrapper">
+					<div class = "portfolio-img-background" style = "background-image:url(image/portfolio6.jpg)"></div>
+					<div class = "img-text-wrapper">
+						<div class = "logo-wrapper">
+							<img src = "image/logos/dailysmarty.png" alt="">
+						</div>
+						<div class = "subtitle">IMAGE A</div>
+					</div>
+				</div>
+				
+				<div class = "portfolio-item-wrapper">
+					<div class = "portfolio-img-background" style = "background-image:url(image/portfolio1.jpg)"></div>
+					<div class = "img-text-wrapper">
+						<div class = "logo-wrapper">
+							<img src = "image/logos/quip.png" alt="">
+						</div>
+						<div class = "subtitle">IMAGE B</div>
+					</div>
+				</div>
+				
+				<div class = "portfolio-item-wrapper">
+					<div class = "portfolio-img-background" style = "background-image:url(image/portfolio2.jpg)"></div>
+					<div class = "img-text-wrapper">
+						<div class = "logo-wrapper">
+							<img src = "image/logos/devcamp.png" alt="">
+						</div>
+						<div class = "subtitle">IMAGE C</div>
+					</div>
+				</div>
+				
+				<div class = "portfolio-item-wrapper">
+					<div class = "portfolio-img-background" style = "background-image:url(image/portfolio3.jpg)"></div>
+					<div class = "img-text-wrapper">
+						<div class = "logo-wrapper">
+							<img src = "image/logos/eventbrite.png" alt="">
+						</div>
+						<div class = "subtitle">IMAGE D</div>
+					</div>
+				</div>
+				
+				<div class = "portfolio-item-wrapper">
+					<div class = "portfolio-img-background" style = "background-image:url(image/portfolio4.jpg)"></div>
+					<div class = "img-text-wrapper">
+						<div class = "logo-wrapper">
+							<img src = "image/logos/shop-hacker.png" alt="">
+						</div>
+						<div class = "subtitle">IMAGE E</div>
+					</div>
+				</div>
+				
+				<div class = "portfolio-item-wrapper">
+					<div class = "portfolio-img-background" style = "background-image:url(image/portfolio5.jpg)"></div>
+					<div class = "img-text-wrapper">
+						<div class = "logo-wrapper">
+							<img src = "image/logos/crondose.png" alt="">
+						</div>
+						<div class = "subtitle">IMAGE F</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</body>
+
+<script>
+	const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
+	
+	portfolioItems.forEach( tempportfolioItem => {
+		tempportfolioItem.addEventListener('mouseover', () => {
+			tempportfolioItem.childNodes[1].classList.add('img-blur');
+			//console.log(tempportfolioItem.childNodes[1].classList);
+		})
+		
+		tempportfolioItem.addEventListener('mouseout', () => {
+			tempportfolioItem.childNodes[1].classList.remove('img-blur');
+			//console.log(tempportfolioItem.childNodes[1].classList);
+		})
+		
+	})
+</script>
+
+</html>
